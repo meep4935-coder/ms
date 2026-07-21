@@ -1,0 +1,15 @@
+{
+    "timestamp": "2026-07-19T01:34:26.821885",
+    "success": false,
+    "latency_ms": {
+        "model_inference": 4082.94,
+        "regex_parsing": 0.14,
+        "total": 4090.65
+    },
+    "detected_fields": {
+        "name": null,
+        "dob": null,
+        "ramq": null
+    },
+    "scanned_texts": []
+}

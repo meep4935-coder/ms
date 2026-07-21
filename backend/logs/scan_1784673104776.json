@@ -1,0 +1,27 @@
+{
+    "timestamp": "2026-07-21T18:31:44.776476",
+    "success": false,
+    "latency_ms": {
+        "model_inference": 25887.43,
+        "regex_parsing": 0.15,
+        "total": 25919.83
+    },
+    "detected_fields": {
+        "name": null,
+        "dob": null,
+        "ramq": null
+    },
+    "highlights": {
+        "name": null,
+        "dob": null,
+        "ramq": null
+    },
+    "scanned_texts": [
+        "MSSS",
+        "Attestation RAMQ",
+        "ATTESTATION",
+        "CARTE D'ASSURANCE MALADIE (RAMO)",
+        "pfeseniee par Fusager",
+        "Dr_Lefebvr e"
+    ]
+}

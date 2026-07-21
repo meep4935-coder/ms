@@ -1,0 +1,81 @@
+{
+    "timestamp": "2026-07-21T18:20:02.763310",
+    "success": true,
+    "latency_ms": {
+        "model_inference": 25415.94,
+        "regex_parsing": 1.26,
+        "total": 25446.6
+    },
+    "detected_fields": {
+        "name": "Gagnon Daig",
+        "dob": "1957-07-09",
+        "ramq": "DAIG 5707 0994"
+    },
+    "highlights": {
+        "name": {
+            "x": 0.31136638452237003,
+            "y": 0.29286019666524155,
+            "w": 0.06650544135429265,
+            "h": 0.2257374946558358
+        },
+        "dob": {
+            "x": 0.5725513905683193,
+            "y": 0.05087644292432664,
+            "w": 0.06892382103990327,
+            "h": 0.006840530141085934
+        },
+        "ramq": {
+            "x": 0.5725513905683193,
+            "y": 0.07139803334758443,
+            "w": 0.09794437726723096,
+            "h": 0.008550662676357419
+        }
+    },
+    "scanned_texts": [
+        "Nom:",
+        "DAIGLE",
+        "MSSS",
+        "Feuille CRDS",
+        "Pr\u00e9nom: GUY",
+        "DDN: 1957-07-09",
+        "Qu\u00e9bec",
+        "Institut universitaire en sant\u00e9 mentale Douglas",
+        "Sexe",
+        "Formulaire",
+        "601",
+        "Adresse: 21819 rue Lavoie",
+        "Sainte",
+        "Dufour",
+        "NAM: DAIG 5707 0994",
+        "Exp : 2027-05-25",
+        "M\u00e9decin: Dr Gagnon",
+        "M\u00e8re:",
+        "MORIN, TH\u00c9ODORE",
+        "DEMANDE DE SERVICES CLINIQUES (CRDS)",
+        "Usager",
+        "DAIGLE",
+        "Guy",
+        "NAM",
+        "DAIG 5707 0994",
+        "Date naissance",
+        "1957-07-09",
+        "Adresse",
+        "21819 rue Lavoie , Sainte- Dufour , QC Y7J 4Y8",
+        "T\u00e9l\u00e9phone",
+        "855-394-0781",
+        "M\u00e9decin demandeur",
+        "Dr Gagnon",
+        "\u00c9tablissement",
+        "Institut universitaire en sante mentale",
+        "Douglas",
+        "Service demand\u00e9",
+        "Sp\u00e9cialiste",
+        "Priorit\u00e9",
+        "Semi-urgent",
+        "Motif clinique: Suivi post-hospitalisation avec bilan compl\u00e9mentaire",
+        "R\u00e9f. interne: HTWA 9559 0728",
+        "AH-601",
+        "2020-05",
+        "Dossier usager"
+    ]
+}
