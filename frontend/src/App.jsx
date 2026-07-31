@@ -18,11 +18,13 @@ function App() {
     ramq: ""
   });
   
-  // State variables for capture and highlights
+  // State variables for capture, highlights, latency & full diagnostics trace
   const [capturedImage, setCapturedImage] = useState(null);
   const [highlights, setHighlights] = useState(null);
-  // Simplified latency metric
   const [totalLatency, setTotalLatency] = useState(null);
+  const [diagnostics, setDiagnostics] = useState(null);
+  const [showDiagnostics, setShowDiagnostics] = useState(false);
+  const [healthStatus, setHealthStatus] = useState(null);
 
   // Audio feedback helper
   const playBeep = (freq = 880, duration = 0.15) => {
@@ -44,6 +46,14 @@ function App() {
       console.warn("Audio Context beep failed", e);
     }
   };
+
+  // Fetch /api/health on mount
+  useEffect(() => {
+    fetch('http://localhost:8000/api/health')
+      .then(res => res.json())
+      .then(data => setHealthStatus(data))
+      .catch(err => console.warn("Backend health check failed:", err));
+  }, []);
 
   // Start/Stop Camera based on mode & scanning state
   useEffect(() => {
@@ -126,6 +136,7 @@ function App() {
 
           setHighlights(data.highlights);
           setTotalLatency(data.total_latency_ms);
+          if (data.diagnostics) setDiagnostics(data.diagnostics);
 
           if (data.success) {
             playBeep(880, 0.15);
@@ -223,6 +234,7 @@ function App() {
 
       setHighlights(data.highlights);
       setTotalLatency(data.total_latency_ms);
+      if (data.diagnostics) setDiagnostics(data.diagnostics);
 
       if (data.success) {
         playBeep(880, 0.15);
@@ -243,7 +255,7 @@ function App() {
           setStatusMessage("Some details identified. Check fields below.");
           setStatusType("active");
         } else {
-          setStatusMessage("No patient details detected. Try another file.");
+          setStatusMessage("No patient details detected. See diagnostics below.");
           setStatusType("error");
         }
       }
@@ -266,6 +278,7 @@ function App() {
     setCapturedImage(null);
     setHighlights(null);
     setTotalLatency(null);
+    setDiagnostics(null);
     setScanning(true);
     setStatusMessage(mode === "camera" ? "Align patient file in the box" : "Drag and drop patient document here");
     setStatusType("active");
@@ -295,6 +308,7 @@ function App() {
     setCapturedImage(null);
     setHighlights(null);
     setTotalLatency(null);
+    setDiagnostics(null);
     setScanning(true);
     setStatusMessage(newMode === "camera" ? "Align patient file in the box" : "Drag and drop patient document here");
     setStatusType("active");
@@ -304,6 +318,16 @@ function App() {
     <div className="glass-panel">
       <h1>Quebec Rx Patient Scanner</h1>
       <p className="subtitle">Instant patient details detection via document camera scanner</p>
+
+      {/* Backend Health Badge */}
+      {healthStatus && (
+        <div className="server-health-bar">
+          <span className="health-badge">🟢 Model Ready: {healthStatus.device}</span>
+          <span className="health-stat">Load Time: {healthStatus.model_load_ms}ms</span>
+          <span className="health-stat">Total Scans: {healthStatus.total_scans}</span>
+          <span className="health-stat">Success Rate: {healthStatus.success_rate_pct}%</span>
+        </div>
+      )}
 
       {/* Mode Tabs */}
       <div className="tab-container">
@@ -393,11 +417,30 @@ function App() {
         )
       )}
 
+      {/* Blur Warning Banner */}
+      {diagnostics?.image_quality?.quality_class === "blurry" && (
+        <div className="blur-banner">
+          <span className="blur-icon">⚠️</span>
+          <div>
+            <strong>Low Image Quality Detected (Blur Score: {diagnostics.image_quality.blur_score})</strong>
+            <p>Image is soft or blurry. Lower confidence thresholds were applied. For best accuracy, consider retaking a clearer photo.</p>
+          </div>
+        </div>
+      )}
+
+      {/* Status Bar */}
       <div className="status-bar">
         <span className={`status-dot ${statusType}`}></span>
         <span>{statusMessage}</span>
         {totalLatency && <span className="latency-badge">{totalLatency} ms</span>}
       </div>
+
+      {/* Failure Diagnostic Alert */}
+      {diagnostics?.failure_reason && (
+        <div className="failure-alert">
+          <span>Scan Failure Reason: <strong>{diagnostics.failure_reason}</strong></span>
+        </div>
+      )}
 
       {/* Hidden Canvas for Frame Capture */}
       <canvas ref={canvasRef} style={{ display: 'none' }} />
@@ -455,6 +498,66 @@ function App() {
           </button>
         )}
       </div>
+
+      {/* Diagnostics & Step-by-Step Pipeline Log Panel */}
+      {diagnostics && (
+        <div className="debug-container">
+          <div className="debug-header" onClick={() => setShowDiagnostics(!showDiagnostics)}>
+            <span>📊 Step-by-Step Scan Diagnostics & Pipeline Trace</span>
+            <span className="debug-toggle-btn">{showDiagnostics ? 'Hide ▲' : 'Show Details ▾'}</span>
+          </div>
+
+          {showDiagnostics && (
+            <div className="debug-body">
+              {/* Metrics Grid */}
+              <div className="metrics-grid">
+                <div className="metric-card font-highlight">
+                  <span className="metric-label">Blur Score & Quality</span>
+                  <span className="metric-value">{diagnostics.image_quality?.blur_score} ({diagnostics.image_quality?.quality_class})</span>
+                </div>
+                <div className="metric-card">
+                  <span className="metric-label">Resolution & Angle</span>
+                  <span className="metric-value">{diagnostics.image_quality?.resolution?.join('x')} ({diagnostics.image_quality?.rotation_angle_deg}°)</span>
+                </div>
+                <div className="metric-card">
+                  <span className="metric-label">Preprocessing Steps</span>
+                  <span className="metric-value">{diagnostics.preprocessing?.steps_applied?.join(', ') || 'None'}</span>
+                </div>
+                <div className="metric-card">
+                  <span className="metric-label">OCR Regions & Conf.</span>
+                  <span className="metric-value">{diagnostics.ocr_summary?.regions_above_threshold} / {diagnostics.ocr_summary?.regions_total} ({diagnostics.ocr_summary?.avg_confidence})</span>
+                </div>
+              </div>
+
+              {/* Latency Breakdown Bar */}
+              <div className="latency-section">
+                <div className="panel-title">Latency Breakdown (ms)</div>
+                <div className="latency-grid">
+                  <div className="lat-item">Load: <span>{diagnostics.latency_breakdown?.image_load}ms</span></div>
+                  <div className="lat-item">Preprocess: <span>{diagnostics.latency_breakdown?.preprocessing}ms</span></div>
+                  <div className="lat-item">OCR: <span>{diagnostics.latency_breakdown?.ocr_inference}ms</span></div>
+                  <div className="lat-item">Regex: <span>{diagnostics.latency_breakdown?.regex_parsing}ms</span></div>
+                  <div className="lat-item total">Total: <span>{diagnostics.latency_breakdown?.total}ms</span></div>
+                </div>
+              </div>
+
+              {/* Step-by-Step Execution Trace */}
+              <div className="log-panel">
+                <div className="panel-title">Pipeline Trace Log (Step-by-Step Math View)</div>
+                <div className="log-entries">
+                  {diagnostics.pipeline_trace?.map((step, idx) => (
+                    <div className="log-entry" key={idx}>
+                      <span className="log-index">[{step.t_ms}ms]</span>
+                      <span className="log-event">{step.event}:</span>
+                      <span className="log-text">{step.detail}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

@@ -593,11 +593,96 @@ h1 {
   word-break: break-all;
 }
 
-.log-placeholder {
-  color: #475569;
-  text-align: center;
-  padding: 1rem 0;
-  font-style: italic;
+/* Server Health Bar */
+.server-health-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
 }
+
+.health-badge {
+  color: #34d399;
+  font-weight: 600;
+}
+
+.health-stat {
+  color: #94a3b8;
+}
+
+/* Blur Banner & Alerts */
+.blur-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.5rem;
+  color: #fef08a;
+  font-size: 0.9rem;
+}
+
+.blur-banner p {
+  margin: 0.2rem 0 0 0;
+  color: #fde047;
+  font-size: 0.85rem;
+}
+
+.blur-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.failure-alert {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Latency Grid */
+.latency-section {
+  margin-bottom: 1rem;
+}
+
+.latency-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+.lat-item span {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.lat-item.total span {
+  color: #60a5fa;
+}
+
+.log-event {
+  color: #fbbf24;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
 
 

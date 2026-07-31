@@ -1,0 +1,796 @@
+{
+    "timestamp": "2026-07-26T17:27:01.930081",
+    "success": false,
+    "failure_reason": "NAME_NOT_EXTRACTABLE",
+    "image_quality": {
+        "file_size_bytes": 284489,
+        "resolution": [
+            1654,
+            2339
+        ],
+        "blur_score": 183.62,
+        "quality_class": "soft",
+        "rotation_angle_deg": 0.0
+    },
+    "preprocessing": {
+        "steps_applied": [
+            "clahe_contrast",
+            "denoise_nlmeans"
+        ],
+        "contrast_before": 15.01,
+        "contrast_after": 16.16,
+        "upscaled": false,
+        "latency_ms": 1937.13
+    },
+    "ocr": {
+        "confidence_threshold_used": 0.3,
+        "scale_used": 1.5,
+        "multiscale_fallback": true,
+        "regions_total": 58,
+        "regions_above_threshold": 13,
+        "avg_confidence": 0.5651,
+        "inference_ms": 26145.34,
+        "raw_results": [
+            {
+                "text": "Frechette",
+                "confidence": 0.581912451887107,
+                "box": {
+                    "x": 0.592503022974607,
+                    "y": 0.03591278324070116,
+                    "w": 0.09008464328899637,
+                    "h": 0.017101325352714837
+                },
+                "passed_threshold": true
+            },
+            {
+                "text": "MSSS",
+                "confidence": 0.6316574215888977,
+                "box": {
+                    "x": 0.07134220072551391,
+                    "y": 0.051303976058144504,
+                    "w": 0.044740024183796856,
+                    "h": 0.011970927746900385
+                },
+                "passed_threshold": true
+            },
+            {
+                "text": "Attestation RAMQ",
+                "confidence": 0.976314182160893,
+                "box": {
+                    "x": 0.18802902055622733,
+                    "y": 0.04574604531851219,
+                    "w": 0.12031438935912939,
+                    "h": 0.01410859341598974
+                },
+                "passed_threshold": true
+            },
+            {
+                "text": "MhrguerITE",
+                "confidence": 0.23774379440315013,
+                "box": {
+                    "x": 0.5918984280532044,
+                    "y": 0.050021376656690895,
+                    "w": 0.0973397823458283,
+                    "h": 0.012825994014536126
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "sogol",
+                "confidence": 0.10857198474751587,
+                "box": {
+                    "x": 0.3282950423216445,
+                    "y": 0.060282171868319794,
+                    "w": 0.05562273276904474,
+                    "h": 0.006840530141085934
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "D",
+                "confidence": 0.6351912188496414,
+                "box": {
+                    "x": 0.5556227327690447,
+                    "y": 0.06370243693886277,
+                    "w": 0.020556227327690448,
+                    "h": 0.005985463873450192
+                },
+                "passed_threshold": true
+            },
+            {
+                "text": "64012",
+                "confidence": 0.15510522175379432,
+                "box": {
+                    "x": 0.5931076178960096,
+                    "y": 0.060282171868319794,
+                    "w": 0.044135429262394194,
+                    "h": 0.010260795211628902
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Q=",
+                "confidence": 0.5723331846408191,
+                "box": {
+                    "x": 0.07315598548972188,
+                    "y": 0.06712270200940573,
+                    "w": 0.02539298669891173,
+                    "h": 0.005985463873450192
+                },
+                "passed_threshold": true
+            },
+            {
+                "text": "FREV 6451250",
+                "confidence": 0.5401865869121065,
+                "box": {
+                    "x": 0.594316807738815,
+                    "y": 0.0748182984181274,
+                    "w": 0.07376058041112454,
+                    "h": 0.008550662676357419
+                },
+                "passed_threshold": true
+            },
+            {
+                "text": "ATTESTATION",
+                "confidence": 0.8261514448518158,
+                "box": {
+                    "x": 0.06348246674727932,
+                    "y": 0.26507054296707994,
+                    "w": 0.07799274486094317,
+                    "h": 0.011970927746900385
+                },
+                "passed_threshold": true
+            },
+            {
+                "text": "CARTE DASSURANCE MALADIE (RAvQ)",
+                "confidence": 0.28152256133430154,
+                "box": {
+                    "x": 0.14691656590084642,
+                    "y": 0.2599401453612655,
+                    "w": 0.21281741233373638,
+                    "h": 0.01581872595126122
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Goessouso",
+                "confidence": 0.19420416673794547,
+                "box": {
+                    "x": 0.28476420798065294,
+                    "y": 0.2774690038477982,
+                    "w": 0.06287787182587666,
+                    "h": 0.007695596408721676
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "roeaacanedassfaneFaade",
+                "confidence": 0.015834339038458413,
+                "box": {
+                    "x": 0.3633615477629988,
+                    "y": 0.27191107310816587,
+                    "w": 0.14933494558645707,
+                    "h": 0.011970927746900385
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Lepréserr OocumesrOorene",
+                "confidence": 0.004256520886155127,
+                "box": {
+                    "x": 0.06408706166868199,
+                    "y": 0.27960666951688756,
+                    "w": 0.12575574365175332,
+                    "h": 0.011115861479264643
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "es",
+                "confidence": 0.17257758507761534,
+                "box": {
+                    "x": 0.20616686819830712,
+                    "y": 0.28003420265070544,
+                    "w": 0.032648125755743655,
+                    "h": 0.005985463873450192
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Presentzepahsaos",
+                "confidence": 0.03178751135130997,
+                "box": {
+                    "x": 0.06348246674727932,
+                    "y": 0.2877297990594271,
+                    "w": 0.09492140266021766,
+                    "h": 0.012825994014536126
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "lu",
+                "confidence": 0.08787787278947257,
+                "box": {
+                    "x": 0.06469165659008465,
+                    "y": 0.30483112441214194,
+                    "w": 0.022974607013301087,
+                    "h": 0.006840530141085934
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "eprénor FRÉQETTE WARCUERTE",
+                "confidence": 0.07624090267224559,
+                "box": {
+                    "x": 0.08524788391777509,
+                    "y": 0.2992731936725096,
+                    "w": 0.16626360338573157,
+                    "h": 0.013253527148353997
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "1sefo dassrande Fiaaoe (EAn) FR26451 2850",
+                "confidence": 0.00530432545581253,
+                "box": {
+                    "x": 0.06287787182587666,
+                    "y": 0.31124412141941,
+                    "w": 0.22370012091898428,
+                    "h": 0.012825994014536126
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Dae0eRassanue 196401-2",
+                "confidence": 0.08136073251111878,
+                "box": {
+                    "x": 0.06408706166868199,
+                    "y": 0.3257802479692176,
+                    "w": 0.1293833131801693,
+                    "h": 0.011115861479264643
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Saf",
+                "confidence": 0.1428667338259717,
+                "box": {
+                    "x": 0.1977025392986699,
+                    "y": 0.3262077811030355,
+                    "w": 0.032648125755743655,
+                    "h": 0.007695596408721676
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Ajesse 3 OoSSef 148636 Bosien Wces +54-1e OcVsR48",
+                "confidence": 0.0070934323388427995,
+                "box": {
+                    "x": 0.06469165659008465,
+                    "y": 0.3347584437793929,
+                    "w": 0.28174123337363965,
+                    "h": 0.015391192817443352
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Daedepraodbcane 2023-05+28",
+                "confidence": 0.08583815214233094,
+                "box": {
+                    "x": 0.06469165659008465,
+                    "y": 0.34886703719538265,
+                    "w": 0.16626360338573157,
+                    "h": 0.013681060282171868
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Wéoeonofanlle DCve",
+                "confidence": 0.04486491659302279,
+                "box": {
+                    "x": 0.06408706166868199,
+                    "y": 0.36340316374519027,
+                    "w": 0.11487303506650544,
+                    "h": 0.011115861479264643
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "CereFeoaRoseo",
+                "confidence": 0.26389067808379146,
+                "box": {
+                    "x": 0.186819830713422,
+                    "y": 0.3612654980761009,
+                    "w": 0.10822249093107618,
+                    "h": 0.011115861479264643
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Éabissereté ee Cenze mêgéœsar?8idseniss s22la2",
+                "confidence": 0.001740985742930882,
+                "box": {
+                    "x": 0.06408706166868199,
+                    "y": 0.3698161607524583,
+                    "w": 0.3222490931076179,
+                    "h": 0.016246259085079092
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "soareaaoctesscore",
+                "confidence": 0.012536764885165171,
+                "box": {
+                    "x": 0.06952841596130592,
+                    "y": 0.3916203505771697,
+                    "w": 0.0973397823458283,
+                    "h": 0.010260795211628902
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Dr_LCêté",
+                "confidence": 0.3938160500755931,
+                "box": {
+                    "x": 0.06348246674727932,
+                    "y": 0.960239418554938,
+                    "w": 0.07557436517533253,
+                    "h": 0.017528858486532708
+                },
+                "passed_threshold": true
+            },
+            {
+                "text": "2e =",
+                "confidence": 0.1898213028907776,
+                "box": {
+                    "x": 0.9292623941958887,
+                    "y": 0.970072680632749,
+                    "w": 0.02902055622732769,
+                    "h": 0.006840530141085934
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "q2",
+                "confidence": 0.10395990032820078,
+                "box": {
+                    "x": 0.18661103652479286,
+                    "y": 0.27911458451802085,
+                    "w": 0.020369220783546065,
+                    "h": 0.009107299540272916
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Bena",
+                "confidence": 0.028376907110214233,
+                "box": {
+                    "x": 0.5550181378476421,
+                    "y": 0.051874020236568334,
+                    "w": 0.028617492946392608,
+                    "h": 0.005985463873450198
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "hrguerITE",
+                "confidence": 0.27903572459292125,
+                "box": {
+                    "x": 0.592503022974607,
+                    "y": 0.05016388770129685,
+                    "w": 0.09673518742442563,
+                    "h": 0.012540971925324211
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "ZagecesateeossanCessocarceisa",
+                "confidence": 0.015548001573910899,
+                "box": {
+                    "x": 0.21604191858121724,
+                    "y": 0.05928459455607809,
+                    "w": 0.17492946392583633,
+                    "h": 0.010830839390052733
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "264013",
+                "confidence": 0.22898368069652092,
+                "box": {
+                    "x": 0.5945183393792826,
+                    "y": 0.06099472709134957,
+                    "w": 0.042321644498186144,
+                    "h": 0.008265640587145507
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Qee",
+                "confidence": 0.1783544246898714,
+                "box": {
+                    "x": 0.07335751713018944,
+                    "y": 0.06669516887558785,
+                    "w": 0.0294236195082628,
+                    "h": 0.005985463873450192
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "25048-222",
+                "confidence": 0.009201642280053102,
+                "box": {
+                    "x": 0.21120515920999597,
+                    "y": 0.07182556648140231,
+                    "w": 0.05360741636436922,
+                    "h": 0.006840530141085934
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Sar",
+                "confidence": 0.4203054194323602,
+                "box": {
+                    "x": 0.5550181378476421,
+                    "y": 0.07068547812455465,
+                    "w": 0.02176541717049577,
+                    "h": 0.005130397605814451
+                },
+                "passed_threshold": true
+            },
+            {
+                "text": "FREV 6451 2250",
+                "confidence": 0.4381917133092406,
+                "box": {
+                    "x": 0.5933091495364773,
+                    "y": 0.07439076528430953,
+                    "w": 0.07456670697299478,
+                    "h": 0.008835684765569328
+                },
+                "passed_threshold": true
+            },
+            {
+                "text": "E",
+                "confidence": 0.3566987870043228,
+                "box": {
+                    "x": 0.5550181378476421,
+                    "y": 0.08465156049593843,
+                    "w": 0.019750100765820212,
+                    "h": 0.005985463873450192
+                },
+                "passed_threshold": true
+            },
+            {
+                "text": "2",
+                "confidence": 0.6256680009983029,
+                "box": {
+                    "x": 0.5953244659411527,
+                    "y": 0.08351147213909078,
+                    "w": 0.035872632003224526,
+                    "h": 0.006840530141085934
+                },
+                "passed_threshold": true
+            },
+            {
+                "text": "7",
+                "confidence": 0.08882306453589095,
+                "box": {
+                    "x": 0.14066908504635228,
+                    "y": 0.268205785948411,
+                    "w": 0.008464328899637243,
+                    "h": 0.005415419695026348
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "CARTE DASSURAHCE MALADIE (RAJO)",
+                "confidence": 0.3483140536927249,
+                "box": {
+                    "x": 0.147118097541314,
+                    "y": 0.2610802337181131,
+                    "w": 0.2112051592099959,
+                    "h": 0.014251104460595713
+                },
+                "passed_threshold": true
+            },
+            {
+                "text": "CoameqeBsterseg e ens G-oessos conesporoe ra BGaedassua c",
+                "confidence": 0.006519592481275848,
+                "box": {
+                    "x": 0.15034260378879483,
+                    "y": 0.27333618355422545,
+                    "w": 0.32849657396211207,
+                    "h": 0.015391192817443352
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "LePreserOocun",
+                "confidence": 0.041237541921539694,
+                "box": {
+                    "x": 0.06207174526400645,
+                    "y": 0.2801767136953114,
+                    "w": 0.09189842805320435,
+                    "h": 0.011115861479264643
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "PresestiepaIusage",
+                "confidence": 0.0069514736069845855,
+                "box": {
+                    "x": 0.06328093510681178,
+                    "y": 0.28815733219324496,
+                    "w": 0.09471987101975007,
+                    "h": 0.012255949836112282
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Jio etPéno r FRÉCETTE WARCLERTE",
+                "confidence": 0.024862685448642882,
+                "box": {
+                    "x": 0.06207174526400645,
+                    "y": 0.2984181274048739,
+                    "w": 0.18903667875856509,
+                    "h": 0.014251104460595713
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "1sero dassiance Faboe (UAn) FR2V6451 2330",
+                "confidence": 0.010830024128333619,
+                "box": {
+                    "x": 0.06207174526400645,
+                    "y": 0.3103890551517743,
+                    "w": 0.2253123740427247,
+                    "h": 0.013966082371383765
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "DalejeRassanue 186401-2|5e2 F",
+                "confidence": 0.019272442796630932,
+                "box": {
+                    "x": 0.06368399838774687,
+                    "y": 0.32464015961236997,
+                    "w": 0.16727126158806935,
+                    "h": 0.011970927746900385
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Aoessea oosser",
+                "confidence": 0.10802440629565593,
+                "box": {
+                    "x": 0.06529625151148731,
+                    "y": 0.3414564628758729,
+                    "w": 0.08020959290608624,
+                    "h": 0.00826564058714552
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "41362lé Bo5ie7 Hncdes Ss-er OCVSR2g",
+                "confidence": 0.009112967999458701,
+                "box": {
+                    "x": 0.14349052801289802,
+                    "y": 0.3346159327347869,
+                    "w": 0.2027408303103587,
+                    "h": 0.01453612654980761
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Dreceoraondeacare 2905-28",
+                "confidence": 0.06808711074008339,
+                "box": {
+                    "x": 0.06247480854494155,
+                    "y": 0.34915205928459453,
+                    "w": 0.16848045143087467,
+                    "h": 0.012540971925324228
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "ueceoncetaalle DCoe",
+                "confidence": 0.01873573627823004,
+                "box": {
+                    "x": 0.06368399838774687,
+                    "y": 0.3628331195667664,
+                    "w": 0.11567916162837567,
+                    "h": 0.01140088356847659
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "CereFeogaRoseo",
+                "confidence": 0.04460180695002495,
+                "box": {
+                    "x": 0.18621523579201935,
+                    "y": 0.36140800912070686,
+                    "w": 0.10882708585247884,
+                    "h": 0.010260795211628902
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Cazenégédsaeedsentessooaude[aa",
+                "confidence": 0.03127148282026783,
+                "box": {
+                    "x": 0.1608222490931076,
+                    "y": 0.3708137380647,
+                    "w": 0.2249093107617896,
+                    "h": 0.01254097192532418
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Baolsse ereea",
+                "confidence": 0.024229484700376596,
+                "box": {
+                    "x": 0.06529625151148731,
+                    "y": 0.37651417984893826,
+                    "w": 0.09794437726723096,
+                    "h": 0.009120706854781262
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "soereofetesscre",
+                "confidence": 0.030652189685707536,
+                "box": {
+                    "x": 0.06972994760177348,
+                    "y": 0.3921903947555936,
+                    "w": 0.09915356711003627,
+                    "h": 0.008835684765569316
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "Dr_Cêté",
+                "confidence": 0.21927090265058272,
+                "box": {
+                    "x": 0.06287787182587666,
+                    "y": 0.9596693743765141,
+                    "w": 0.0761789600967352,
+                    "h": 0.01852643579877447
+                },
+                "passed_threshold": false
+            },
+            {
+                "text": "\"",
+                "confidence": 0.13176052261493343,
+                "box": {
+                    "x": 0.06247480854494155,
+                    "y": 0.9838962519595269,
+                    "w": 0.02781136638452238,
+                    "h": 0.01054581730084075
+                },
+                "passed_threshold": false
+            }
+        ]
+    },
+    "extraction": {
+        "ramq": {
+            "found": true,
+            "method": "line_by_line",
+            "matched_text": "FREV 6451 2250",
+            "cleaned": "FREV64512250"
+        },
+        "dob": {
+            "found": true,
+            "method": "ramq_checksum_decoded",
+            "source": "RAMQ number"
+        },
+        "name": {
+            "found": false,
+            "method": null
+        }
+    },
+    "latency_ms": {
+        "image_load": 0.0,
+        "preprocessing": 1937.13,
+        "ocr_inference": 26145.34,
+        "regex_parsing": 1.17,
+        "total": 28121.81
+    },
+    "detected_fields": {
+        "name": null,
+        "dob": "1964-01-22",
+        "ramq": "FREV 6451 2250"
+    },
+    "highlights": {
+        "name": null,
+        "dob": {
+            "x": 0.5933091495364773,
+            "y": 0.07439076528430953,
+            "w": 0.07456670697299478,
+            "h": 0.008835684765569328
+        },
+        "ramq": {
+            "x": 0.5933091495364773,
+            "y": 0.07439076528430953,
+            "w": 0.07456670697299478,
+            "h": 0.008835684765569328
+        }
+    },
+    "scanned_texts": [
+        "Frechette",
+        "MSSS",
+        "Attestation RAMQ",
+        "D",
+        "Q=",
+        "FREV 6451250",
+        "ATTESTATION",
+        "Dr_LCêté",
+        "Sar",
+        "FREV 6451 2250",
+        "E",
+        "2",
+        "CARTE DASSURAHCE MALADIE (RAJO)"
+    ],
+    "pipeline_trace": [
+        {
+            "event": "IMAGE_LOAD",
+            "t_ms": 0.0,
+            "detail": "Loaded raw image bytes (284489 bytes)"
+        },
+        {
+            "event": "PREPROCESS_START",
+            "t_ms": 30.74,
+            "detail": "Analyzing quality, blur, and applying enhancement pipeline"
+        },
+        {
+            "event": "PREPROCESS_END",
+            "t_ms": 1970.58,
+            "detail": "Quality: soft (blur_score=183.62), steps=['clahe_contrast', 'denoise_nlmeans']"
+        },
+        {
+            "event": "DYNAMIC_THRESHOLD",
+            "t_ms": 1970.58,
+            "detail": "Confidence threshold set to 0.3"
+        },
+        {
+            "event": "OCR_START",
+            "t_ms": 1970.59,
+            "detail": "Running primary EasyOCR pass on preprocessed image"
+        },
+        {
+            "event": "MULTISCALE_FALLBACK",
+            "t_ms": 14124.03,
+            "detail": "Primary OCR returned sparse/low-confidence results. Running 1.5x multi-scale pass."
+        },
+        {
+            "event": "OCR_END",
+            "t_ms": 28120.64,
+            "detail": "Found 58 total regions, 13 above threshold 0.3. Avg confidence: 0.5651"
+        },
+        {
+            "event": "REGEX_PARSING_START",
+            "t_ms": 28120.64,
+            "detail": "Searching for RAMQ, DOB, and Name patterns"
+        },
+        {
+            "event": "REGEX_RAMQ",
+            "t_ms": 28120.88,
+            "detail": "Found RAMQ line-by-line: 'FREV 6451 2250'"
+        },
+        {
+            "event": "REGEX_DOB_RAMQ_FALLBACK",
+            "t_ms": 28121.35,
+            "detail": "Derived DOB from RAMQ checksum: '1964-01-22'"
+        },
+        {
+            "event": "REGEX_NAME_FAILED",
+            "t_ms": 28121.81,
+            "detail": "Could not locate patient name"
+        },
+        {
+            "event": "RESULT",
+            "t_ms": 28121.81,
+            "detail": "Success=False, FailureReason=NAME_NOT_EXTRACTABLE, Latency=28121.81ms"
+        }
+    ],
+    "scan_id": "scan_1785101221930"
+}

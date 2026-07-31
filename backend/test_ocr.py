@@ -1,5 +1,7 @@
-# Simple test script to verify RAMQ & DOB extraction regex rules.
-from ocr_engine import parse_ramq_dob_info
+# Simple test script to verify RAMQ & DOB extraction regex rules and preprocessing pipeline.
+import numpy as np
+import cv2
+from ocr_engine import parse_ramq_dob_info, compute_blur_score, preprocess_image
 
 def test_ramq_parsing():
     # RAMQ structure: AAAA YYMMDD XX
@@ -21,7 +23,25 @@ def test_ramq_parsing():
     assert res_2000 is not None
     assert res_2000["dob"] == "2005-01-20"
     
-    print("All backend local unit tests passed successfully!")
+    print("RAMQ regex parsing tests passed!")
+
+def test_image_preprocessing():
+    # Synthetic clean image
+    clean_img = np.zeros((500, 500, 3), dtype=np.uint8)
+    cv2.putText(clean_img, "RAMQ TEST 1234", (50, 200), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (255, 255, 255), 2)
+    
+    gray = cv2.cvtColor(clean_img, cv2.COLOR_RGB2GRAY)
+    blur_score = compute_blur_score(gray)
+    assert blur_score > 0
+    
+    # Run preprocess
+    processed_np, quality_metrics, preprocess_info = preprocess_image(clean_img, file_size_bytes=1024)
+    assert quality_metrics["quality_class"] in ("sharp", "soft", "blurry")
+    assert "resolution" in quality_metrics
+    assert len(preprocess_info["steps_applied"]) > 0
+    print("Image preprocessing unit tests passed!")
 
 if __name__ == "__main__":
     test_ramq_parsing()
+    test_image_preprocessing()
+    print("All backend local unit tests passed successfully!")
