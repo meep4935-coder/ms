@@ -1,0 +1,13 @@
+{
+  "_comment": "Copy this file to ground_truth.json and replace the entries with YOUR images. Each key is the exact filename inside eval/images/. Each value is the known-correct answer. Leave a field null if that image legitimately does not contain it (e.g. a card with no printed DOB) -- the harness will not penalize a field it has no label for. Use the SAME string formats the pipeline outputs: DOB as YYYY-MM-DD, name as 'Lastname, Firstname', RAMQ as 'AAAA 0000 0000'. Delete this _comment key (and the sample rows) before running.",
+  "sample_card_01.jpg": {
+    "name": "Tremblay, Jean",
+    "dob": "1985-07-12",
+    "ramq": "TREJ 8507 1203"
+  },
+  "sample_card_02.jpg": {
+    "name": "Gagnon, Marie",
+    "dob": "1990-11-30",
+    "ramq": "GAGM 9061 3005"
+  }
+}
